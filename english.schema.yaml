@@ -1,0 +1,32 @@
+schema:
+  schema_id: english
+  name: 英文
+  version: 0
+
+engine:
+  processors:
+    - ascii_composer
+    - speller
+    - selector
+    - punctuator
+    - express_editor
+  segmentors:
+    - abc_segmentor
+    - punct_segmentor
+  translators:
+    - table_translator
+    - punct_translator
+
+speller:
+  alphabet: qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM`-=[]\;,./~!@#$%^&*()_+{}|:"<>?
+
+menu:
+  page_size: 9
+  alternative_select_keys: 123456789
+
+switches:
+  - name: full_shape
+    states: [半形,全形]
+
+translator: 
+  dictionary: english
